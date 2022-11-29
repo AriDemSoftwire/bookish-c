@@ -1,40 +1,30 @@
-﻿using Bookish.WebApp.Data;
-using Bookish.WebApp.Models;
+﻿using bookish_c_test.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using bookish_c_test.Connection;
+using System.Collections;
+using System.Linq;
+using System.Web;
+using System;
 
-namespace Bookish.WebApp.Controllers
+
+namespace bookish_c_test.Controllers
 {
     public class HomeController : Controller
     {
-        BookishWebAppContext db; public HomeController()
+        TestDbContext db; public HomeController()
         {
-            db = new BookishWebAppContext();
+            db = new TestDbContext();
         }
 
         public IActionResult Index()
         {
-            return View();
+            var data = db.Book.ToList();
+            return View(data);
         }
 
         public IActionResult Privacy()
         {
-            return View();
-        }
-
-        public ActionResult Catalogue()
-        {
-            var data = db.Book.ToList();
-            return View(data);
-        }
-        public ActionResult About()
-        {
-
-            return View();
-        }
-        public ActionResult Contact()
-        {
-
             return View();
         }
 

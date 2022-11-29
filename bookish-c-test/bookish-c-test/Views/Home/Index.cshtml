@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table>
+    <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Available copies</th>
+  </tr>
+    @foreach (var item in Model)
+    {
+  <tr>
+        <td>@item.isbn</td>
+        <td>@item.title</td>
+        <td>@item.author</td>
+        <td>@item.totalcopies</td>
+  </tr>
+    }
+</table>
+
+    
+
+    
+
+    
+

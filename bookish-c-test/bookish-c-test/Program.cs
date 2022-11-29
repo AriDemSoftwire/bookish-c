@@ -1,13 +1,8 @@
-﻿using Bookish.WebApp.Data;
+using bookish_c_test.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Design;
-using Bookish.WebApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-//builder.Services.AddDbContext<BookishWebAppContext>(options =>
-//    options.UseNpgsql(builder.Configuration.GetConnectionString("BookishWebAppContext") ?? throw new InvalidOperationException("Connection string 'BookishWebAppContext' not found.")));
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");

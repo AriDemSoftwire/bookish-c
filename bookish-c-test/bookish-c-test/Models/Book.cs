@@ -1,7 +1,6 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Bookish.WebApp.Models
+namespace bookish_c_test.Models
 {
     [Table("bookstable", Schema = "public")]
     public class Book

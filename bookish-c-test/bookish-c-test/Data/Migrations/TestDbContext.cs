@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using bookish_c_test.Models;
 using Microsoft.EntityFrameworkCore;
-using Bookish.WebApp.Models;
 
-namespace Bookish.WebApp.Data
+namespace bookish_c_test.Connection
 {
-    public class BookishWebAppContext : DbContext
+    public class TestDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Username=postgres;Password=_oCoqG5q5L;Database=bookishc");
