@@ -7,7 +7,7 @@ namespace Bookish.WebApp.Models
     public class User
     {
         [Key]
-        public int id { get; set; }
+        public int userid { get; set; }
         public string username { get; set; }
         public string userpass { get; set; }
     }

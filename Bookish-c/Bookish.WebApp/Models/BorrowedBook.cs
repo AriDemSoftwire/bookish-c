@@ -8,8 +8,8 @@ namespace Bookish.WebApp.Models
     {
         [Key]
         public int isbn { get; set; }
-        public string title { get; set; }
-        public string author { get; set; }
-        public int totalcopies { get; set; }
+        public int userid { get; set; }
+        public int copyid { get; set; }
+        public string returndate { get; set; }
     }
 }

@@ -19,6 +19,23 @@
     <td>@Model.title</td>
     <td>@Model.author</td>
     <td>@Model.totalcopies</td>
+        
     </tr>
 
+</table>
+
+<h2>Borrowed copies:</h2>
+<table>
+    <tr>
+    <th>User name</th>
+    <th>Return date</th>
+    </tr>
+    @for (int i = 0; i < Model.username.Count; i++)
+    {
+            <tr>
+          <td>@Model.username[i]</td>
+          <td>@Model.returndate[i]</td>
+              </tr>
+    }
+    
 </table>
