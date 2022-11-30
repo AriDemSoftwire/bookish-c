@@ -2,6 +2,7 @@
 using Bookish.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Linq;
 
 namespace Bookish.WebApp.Controllers
 {
@@ -22,16 +23,12 @@ namespace Bookish.WebApp.Controllers
             return View();
         }
 
-        public ActionResult Catalogue()
-        {
-            var data = db.Book.ToList();
-            return View(data);
-        }
         public ActionResult About()
         {
 
             return View();
         }
+
         public ActionResult Contact()
         {
 

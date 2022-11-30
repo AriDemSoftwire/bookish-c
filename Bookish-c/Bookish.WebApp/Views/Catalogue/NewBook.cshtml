@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Create New Book";
+}
+      <!DOCTYPE html>
+
+<html>
+<head>
+    <title>New book</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data" asp-controller="Catalogue" asp-action="NewBook">
+        <table>
+            <tr>
+                <td>Title: </td>
+                <td><input type="text" id="txtTitle" name="title"/></td>
+            </tr>
+            <tr>
+                <td>Author: </td>
+                <td><input type="text" id="txtAuthor" name="author"/></td>
+            </tr>
+            <tr>
+                <td>Author: </td>
+                <td><input type="text" id="txtCopies" name="copies"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit"/></td>
+            </tr>
+        </table>
+        <hr/>
+    </form>
+</body>
+</html>
