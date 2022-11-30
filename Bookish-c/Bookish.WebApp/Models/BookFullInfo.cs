@@ -11,6 +11,7 @@ namespace Bookish.WebApp.Models
         public string title { get; set; }
         public string author { get; set; }
         public int totalcopies { get; set; }
+        public int availablecopies { get; set; }
         public List<string> username { get; set; }
         public List<string> returndate { get; set; }
     }

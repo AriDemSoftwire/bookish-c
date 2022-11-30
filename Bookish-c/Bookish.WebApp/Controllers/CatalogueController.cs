@@ -17,11 +17,17 @@ namespace Bookish.WebApp.Controllers
             db = new BookishWebAppContext();
         }
 
-        public ActionResult Index()
-        {
-            var booksList = db.Books.ToList();
 
-            return View(booksList);
+        public ActionResult Index(string searchString)
+        {
+            var books = db.Books.OrderBy(book => book.title).ToList();
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                books = books.Where(s => s.title!.Contains(searchString)).ToList();
+            }
+
+            return View(books);
         }
 
         public ActionResult NewBook()
@@ -59,6 +65,7 @@ namespace Bookish.WebApp.Controllers
             bookInfo.returndate = new List<string>();
 
             var listOfCopies = db.BorrowedBooks.Where(b => b.isbn == Id).ToList();
+            bookInfo.availablecopies = bookInfo.totalcopies - listOfCopies.Count;
             List<string> dateList = new List<string>();
             List<string> usernameList = new List<string>();
 
